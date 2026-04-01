@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Search and explore food recipes using the Spoonacular API. Filter by diet, cuisine, and sort results easily." />
+  <title>Recipe Finder – Search &amp; Explore Recipes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <header class="header" id="header">
+    <h1>🍳 Recipe Finder</h1>
+    <p class="tagline">Discover delicious recipes in seconds</p>
+  </header>
+  
+  <section class="controls" id="controls">
+    
+    <div class="control-group">
+      <label for="search-input">Search</label>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="e.g. pasta, chicken, salad…"
+        autocomplete="off"
+      />
+    </div>
+    
+    <div class="control-group">
+      <label for="filter-diet">Diet</label>
+      <select id="filter-diet">
+        <option value="">All Diets</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="gluten free">Gluten Free</option>
+        <option value="ketogenic">Ketogenic</option>
+      </select>
+    </div>
+ 
+    <div class="control-group">
+      <label for="filter-cuisine">Cuisine</label>
+      <select id="filter-cuisine">
+        <option value="">All Cuisines</option>
+        <option value="italian">Italian</option>
+        <option value="mexican">Mexican</option>
+        <option value="indian">Indian</option>
+        <option value="chinese">Chinese</option>
+        <option value="american">American</option>
+        <option value="japanese">Japanese</option>
+        <option value="thai">Thai</option>
+      </select>
+    </div>
+
+   
+    <div class="control-group">
+      <label for="sort-select">Sort By</label>
+      <select id="sort-select">
+        <option value="">Default</option>
+        <option value="az">Title A → Z</option>
+        <option value="za">Title Z → A</option>
+        <option value="time-asc">Cooking Time ↑</option>
+        <option value="time-desc">Cooking Time ↓</option>
+      </select>
+    </div>
+
+    <div class="control-group control-group--btn">
+      <button id="search-btn" type="button">Search</button>
+    </div>
+
+    <div class="control-group control-group--btn">
+      <button id="favorites-btn" type="button">❤️ Favorites</button>
+    </div>
+  </section>
+
+  <div class="loader" id="loader" hidden>
+    <div class="spinner"></div>
+    <p>Fetching recipes…</p>
+  </div>
+
+  <p class="message" id="message" hidden></p>
+
+  <main class="recipe-grid" id="recipe-grid"></main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
