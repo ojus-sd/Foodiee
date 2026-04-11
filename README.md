@@ -1,5 +1,7 @@
 # 🍳 Recipe Finder
 
+**Live Demo:** [https://comfy-lamington-203738.netlify.app]
+
 This is a simple web app I made where you can search for recipes easily. It uses the Spoonacular API to get recipe data.
 
 ---
